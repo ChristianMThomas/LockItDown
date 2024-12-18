@@ -11,16 +11,14 @@
 <header><h1>LockItDown 🔐</h1></header>
     <div id="loginForm">
     <form>
-        <h1>Login</h1>
+        <h1>Login <span class =version>v1</span> </h1>
         <input id="Username" type="text" placeholder="Username"  minlength="5" maxlength="20">  <br>
-        <input id="Password" type ="password" placeholder="Password" minlength="6" maxlength="20"> <br>
+        <input id="Password" type ="password" placeholder="Password" minlength="6" maxlength="20"> <br><br>
 
-        <input id="forgotPassword" type="checkbox">
-        <label for="forgotPassword">Forgot Password</label>  <br><br>
+        <a href="ResetPassword.html">Forgot Password?</a> <br>
 
-        <button type="button" onclick="createAccount()">Create Account</button>
-        
-
+        <button type="submit" onclick="login()">Sign in</button> <br>
+        <button type="submit" onclick="createAccount()">Create account</button>
     </form>
     </div>
 </div>
