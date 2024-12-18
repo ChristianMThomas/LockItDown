@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LockItDown::Login</title>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LockItDown::Login</title>
+<link rel ="stylesheet" href="color.css"> 
 </head>
 <body>
-    
+<div id="container">
+<header><h1>LockItDown 🔐</h1></header>
+    <div id="loginForm">
+    <form>
+        <h1>Login</h1>
+        <input id="Username" type="text" placeholder="Username"  minlength="5" maxlength="20">  <br>
+        <input id="Password" type ="password" placeholder="Password" minlength="6" maxlength="20"> <br>
+
+        <input id="forgotPassword" type="checkbox">
+        <label for="forgotPassword">Forgot Password</label>  <br><br>
+
+        <button type="button" onclick="createAccount()">Create Account</button>
+        
+
+    </form>
+    </div>
+</div>
+
+
+
+<script src="login.js"></script>
 </body>
 </html>
