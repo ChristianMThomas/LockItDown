@@ -1,30 +1,18 @@
+//parent class //
 class user{
                 // Variables //
-    usernameFromInput = document.getElementById("Username");
-    passwordFromInput = document.getElementById("Password");
-    userId;
     static totalUsers;
-
-
 
                 // Constructor //
     constructor(username, password, ID){
-        this.usernameFromInput = username;
-        this.passwordFromInput = password;
-        this.userId = ID;
-
+        this.username = username;
+        this.password = password;
+        this.ID = ID;
         totalUsers++;
-
-                // Methods //
-
-    }
-    
+    }  
 }
 
-//parent class //
-
-
-
+// subclass for admins //
 
 class admin extends user{
 
@@ -39,9 +27,15 @@ class admin extends user{
 
 
 }
+//subclass for activated users//
+class activated extends user{
 
-// subclass for admins //
-
+    constructor(username, password, ID){
+       super(username, password, ID);
+       totalUsers++;
+}
+}
+//subclass for deactivated users//
 class deactivated extends user{
 
     constructor(username, password, ID, isForceDeactivated, isTemporarilyDeactivated){
@@ -51,6 +45,20 @@ class deactivated extends user{
        totalUsers++;
 }
 }
+
+ function login(){
+    console.log("You clicked the login button");
+    const user = new activated(acceptInput.usernameFromInput, acceptInput.passwordFromInput, acceptInput.userId);
+}
+
+
+function acceptInput(){
+    usernameFromInput = document.getElementById("Username");
+    passwordFromInput = document.getElementById("Password");
+    length = 12;
+    const userId = Math.floor(Math.random() * length);
+}
+
 
 
 
