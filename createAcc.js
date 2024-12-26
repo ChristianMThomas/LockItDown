@@ -37,21 +37,39 @@ this.isTemporarilyDeactivated = isTemporarilyDeactivated;
 }
 }
 
+// encrypts the user data before we store it 
+function encryptData(){
 
-function storeUserInput() { 
+}
+//decrypts the user data before we grab it //
+function decryptData(){
+
+}
+ // creates account from user input //
+function configUserInput() { 
     let username = document.getElementById('username').value; 
     let password = document.getElementById('password').value;
     let ID = generateRandomNum();
     let account = new activated(username, password, ID);
-    console.log(account.ID);
+    storeUserInput(account);
 }
 
+// creates a unique ID for each account //
 function generateRandomNum(){
     let randomNumber = ''; 
     for (let i = 0; i < 10; i++){ 
         randomNumber += Math.floor(Math.random() * 10);
     } 
  return randomNumber;
+}
+
+// Save the user data to localStorage //
+function storeUserInput(){
+}
+
+// retrieves the user data from localStorage //
+function grabUserInput(){
+// this function might need to be put on the login page //
 }
 
 
