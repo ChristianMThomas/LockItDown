@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-   <title></title>
-    <link rel="stylesheet" href="create_styles.css">
-	<script src=""></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LockItDown::CreateAccount</title>
+<link rel="stylesheet" href="create_styles.css">
 </head>	 
 
 <body>
@@ -31,10 +31,11 @@
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="current-password" id="password" name="password" required>
             </div>
-            <input type="submit" value="Create Account">
+            <button type ="button" id="submit" onclick="storeUserInput()">Create Account</button>
             </form>
-    </div>
+</div>
+    <script src="createAcc.js"></script>
 </body>
 </html>

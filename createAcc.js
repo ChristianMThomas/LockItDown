@@ -37,6 +37,26 @@ this.isTemporarilyDeactivated = isTemporarilyDeactivated;
 }
 }
 
+
+function storeUserInput() { 
+    let username = document.getElementById('username').value; 
+    let password = document.getElementById('password').value;
+    let ID = generateRandomNum();
+    let account = new activated(username, password, ID);
+    console.log(account.ID);
+}
+
+function generateRandomNum(){
+    let randomNumber = ''; 
+    for (let i = 0; i < 10; i++){ 
+        randomNumber += Math.floor(Math.random() * 10);
+    } 
+ return randomNumber;
+}
+
+
+
+
  
 
 
