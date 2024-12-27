@@ -37,6 +37,9 @@ form input {
     border-radius: 10px;
 }
 
+i {
+    font-size: 25px;
+}
 form a{
     color: black;
     text-decoration: none; 
@@ -88,10 +91,11 @@ form button:hover{
     #loginForm  form{
         background-color: white;
         width: 85%;
-        height: 400px;
+        height: 500px;
         margin-top: 15%;
         margin-left: auto;
         margin-right: auto;  
+    
     }
     
     form input {

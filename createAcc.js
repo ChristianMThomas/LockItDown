@@ -65,12 +65,9 @@ function generateRandomNum(){
 
 // Save the user data to localStorage //
 function storeUserInput(){
+    
 }
 
-// retrieves the user data from localStorage //
-function grabUserInput(){
-// this function might need to be put on the login page //
-}
 
 
 

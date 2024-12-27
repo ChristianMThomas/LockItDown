@@ -2,7 +2,7 @@
 // login user if their data matches data grabbed from storage AND if they pass 2 factor authentification // 
 function login(){
     console.log("You clicked the login button");
-    window.location.href = "index.html";
+    window.location.href = "home.html";
 }
 
 // redirects user to create an account page //
@@ -19,4 +19,7 @@ function deactivateAccount(){
     // make it so only admins can approve and disapprove the deactivication  once a request is sent //
 }
 
-
+// retrieves the user data from localStorage //
+function grabUserInput(){ 
+    }
+    
