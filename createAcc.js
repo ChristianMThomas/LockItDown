@@ -47,11 +47,19 @@ function decryptData(){
 }
  // creates account from user input //
 function configUserInput() { 
-    let username = document.getElementById('username').value; 
-    let password = document.getElementById('password').value;
-    let ID = generateRandomNum();
-    let account = new activated(username, password, ID);
+    const username = document.getElementById('username').value; 
+    const password = document.getElementById('password').value;
+    const ID = generateRandomNum();
+    account = new activated(username, password, ID);
     storeUserInput(account);
+    alert("Account stored sucessfully!");
+
+    // Save the user data to localStorage //
+    function storeUserInput(){
+    localStorage.setItem(`userAccount`, account);
+    console.log(`userAccount`);
+    
+}
 }
 
 // creates a unique ID for each account //
@@ -63,10 +71,6 @@ function generateRandomNum(){
  return randomNumber;
 }
 
-// Save the user data to localStorage //
-function storeUserInput(){
-    
-}
 
 
 

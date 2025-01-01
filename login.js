@@ -1,8 +1,16 @@
+// variables //
+  let wasSuccessful;
+
+// functions//
+
+// redirect user to homepage //
+const redirectHome = (url) => {window.location.href = url;}
+
 
 // login user if their data matches data grabbed from storage AND if they pass 2 factor authentification // 
 function login(){
-    console.log("You clicked the login button");
-    window.location.href = "home.html";
+    grabUserInput(wasSuccessful);
+    wasSuccessful ? redirectHome("home.html") : alert("Your Username or Password is incorrect! Please Try again.");
 }
 
 // redirects user to create an account page //
@@ -20,6 +28,18 @@ function deactivateAccount(){
 }
 
 // retrieves the user data from localStorage //
-function grabUserInput(){ 
+function grabUserInput(wasSuccessful){ 
+    const storedInput = localStorage.getItem(account);
+            if (storedInput) {
+                alert('Retrieved Input: ' + storedInput);
+                wasSuccessful = true;
+            } else {
+                alert('No input found in storage.');
+                wasSuccessful = false;
+            }
+        return wasSuccessful;
     }
-    
+
+
+
+    // FIX STORAGE FOR CREATE ACC AND LOGIN // 1/1/25
