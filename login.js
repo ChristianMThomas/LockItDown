@@ -1,7 +1,5 @@
 // LOGIN JAVASCRIPT //
  
-
-  
   // redirect user to homepage //
   const redirectHome = (url) => {window.location.href = url;}
   
@@ -27,6 +25,12 @@
   // retrieves the user data from localStorage //
   function grabUserInput(){ 
       const storedInput = JSON.parse(localStorage.getItem(`userAccount`));
-      storedInput ? redirectHome("home.html") : alert("Username or Password is Incorrect! Please try again.");
+      const loginUser = document.getElementById("Username");
+      const loginPass = document.getElementById("Password");
+      const loginID = document.getElementById("UniqueID");
+      console.log(storedInput);
+      const isValid =  storedInput && storedInput.username === loginUser && storedInput.password === loginPass && storedInput.ID === loginID;
+      isValid ? redirectHome("home.html") : alert("Username or Password is Incorrect! Please try again.");
     }
   
+    // FIX GRAB INPUT TO CONFIRM IF INPUT IS CORRRECT //
