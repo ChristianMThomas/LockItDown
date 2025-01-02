@@ -37,7 +37,8 @@ this.isTemporarilyDeactivated = isTemporarilyDeactivated;
 }
 }
 
-// encrypts the user data before we store it 
+
+    // encrypts the user data before we store it 
 function encryptData(){
 
 }
@@ -50,19 +51,10 @@ function configUserInput() {
     const username = document.getElementById('username').value; 
     const password = document.getElementById('password').value;
     const ID = generateRandomNum();
-    account = new activated(username, password, ID);
-    storeUserInput(account);
-    alert("Account stored sucessfully!");
-
-    // Save the user data to localStorage //
-    function storeUserInput(){
-    localStorage.setItem(`userAccount`, account);
-    console.log(`userAccount`);
+    let account = new activated(username, password, ID);
+    localStorage.setItem(`userAccount`, JSON.stringify(account));
     
-}
-}
-
-// creates a unique ID for each account //
+    // creates a unique ID for each account //
 function generateRandomNum(){
     let randomNumber = ''; 
     for (let i = 0; i < 10; i++){ 
@@ -70,6 +62,14 @@ function generateRandomNum(){
     } 
  return randomNumber;
 }
+}
+
+
+
+
+
+
+
 
 
 
