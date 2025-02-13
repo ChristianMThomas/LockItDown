@@ -1,26 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LockItDown::CreateAccount</title>
-<link rel="stylesheet" href="create_styles.css">
-</head>	 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LockItDown::CreateAccount</title>
+    <link rel="stylesheet" href="create_styles.css">
+</head>
 
 <body>
-<section>
-  <header>
-  <h1>LockItDown 🔐</h1>
-  </header>
-<nav>
-    <ul>
-      <li><a href="createAcc.html">CreateAccount</a></li>  
-      <li><a href="login.html">Login</a></li> 	
-    </ul>
-</nav>
+    <header>
+        <h1>LockItDown 🔐</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="createAcc.html">CreateAccount</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <h2>Create Account</h2>
-            <form action="/submit_account" method="post">
+        <form>
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -29,9 +31,9 @@
                 <label for="password">Password:</label>
                 <input type="current-password" id="password" name="password" required>
             </div>
-            <button type ="submit" id="submit" onclick="configUserInput()">Create Account</button>
-            </form>
-</div>
+            <button type="button" id="submit" onclick="configUserInput()">Create Account</button>
+        </form>
+    </div>
     <script src="createAcc.js"></script>
 </body>
 </html>

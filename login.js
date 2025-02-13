@@ -24,13 +24,14 @@
   
   // retrieves the user data from localStorage //
   function grabUserInput(){ 
-      const storedInput = JSON.parse(localStorage.getItem(`userAccount`));
-      const loginUser = document.getElementById("Username");
-      const loginPass = document.getElementById("Password");
-      const loginID = document.getElementById("UniqueID");
-      console.log(storedInput);
-      const isValid =  storedInput && storedInput.username === loginUser && storedInput.password === loginPass && storedInput.ID === loginID;
-      isValid ? redirectHome("home.html") : alert("Username or Password is Incorrect! Please try again.");
+      let users = JSON.parse(localStorage.getItem(`users`)) || [];
+      const loginUser = document.getElementById("Username").value;
+      const loginPass = document.getElementById("Password").value;
+      const loginID = document.getElementById("UniqueID").value;
+
+      let user = users.find(user => user.username === loginUser &&
+                                    user.password === loginPass);
+    
+      user ? redirectHome("home.html") : alert("Username or Password is Incorrect! Please try again.");
     }
   
-    // FIX GRAB INPUT TO CONFIRM IF INPUT IS CORRRECT //
